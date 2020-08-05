@@ -1,8 +1,9 @@
 import "leaflet/dist/leaflet.css";
-//import "../dist/leaflet-ruler.css";
+import "leaflet-ruler/src/leaflet-ruler.css";
 import "./assets/visiomatic.css";
 
 import L from "leaflet";
+import "leaflet-ruler/src/leaflet-ruler.js";
 
 import "./Projection.WCS.js";
 import "./CRS.WCS.js";

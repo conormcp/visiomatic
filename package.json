@@ -6,6 +6,7 @@
     "jqplot-exported": "^1.0.9-pm.9",
     "jquery": "^3.5.1",
     "leaflet": "1.6.0",
+    "leaflet-ruler": "https://github.com/gokertanrisever/leaflet-ruler",
     "spectrum-colorpicker": "^1.8.1"
   },
   "devDependencies": {
