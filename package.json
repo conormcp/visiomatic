@@ -17,12 +17,9 @@
     "css-loader": "^4.2.0",
     "eslint": "^7.6.0",
     "file-loader": "^6.0.0",
-    "jake": "^10.8.2",
-    "karma": "~0.8.6",
     "mini-css-extract-plugin": "^0.9.0",
-    "mocha": "~1.10.0",
     "style-loader": "^1.2.1",
-    "uglify-js": "~>2.6.0",
+    "terser-webpack-plugin": "^4.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
@@ -30,7 +27,6 @@
   "private": true,
   "scripts": {
     "test": "echo \"no test yet\" && exit 0",
-    "prepublish": "jake",
     "lint": "eslint --fix --ext .js ./src/",
     "build": "babel dist/visiomatic.js -d lib",
     "webpack": "webpack --config webpack.config.js"

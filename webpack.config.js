@@ -1,6 +1,7 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -11,7 +12,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   mode: "production",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -23,15 +29,8 @@ module.exports = {
         loader: "file-loader",
         options: {
           outputPath: "images",
-          //  publicPath: "node_modules/visiomatic/lib/images",
         },
       },
-      /*
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: "url-loader",
-      },
-      */
     ],
   },
 };
