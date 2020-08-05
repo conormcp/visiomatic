@@ -1,0 +1,429 @@
+/* @preserve
+ * Leaflet 1.6.0, a JS library for interactive maps. http://leafletjs.com
+ * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ */
+
+/*!
+ * Sizzle CSS Selector Engine v2.3.5
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://js.foundation/
+ *
+ * Date: 2020-03-14
+ */
+
+/*!
+ * jQuery JavaScript Library v3.5.1
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2020-05-04T22:49Z
+ */
+
+/*!
+# Add an ellipse defined by its semi-major and semi-minor axes (in degrees), as
+# well as a position angle in degrees (east of north).
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#
+#	Last modified: 15/10/2015
+*/
+
+/*!
+# Add an ellipse defined by its semi-major and semi-minor axes (in pixels), as
+# well as a position angle in degrees (CCW from x axis).
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#
+#	Last modified: 15/10/2015
+*/
+
+/*!
+# FileTree parses directory trees serverside.
+# Adapted from the jQuery File Tree Plugin (original copyright notice reproduced
+# below).
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                     Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 11/02/2014
+// Originally authored by Cory S.N. LaViska
+// A Beautiful Site (http://abeautifulsite.net/)
+// 24 March 2008
+//
+// Usage: $('.fileTreeDemo').fileTree( options, callback )
+//
+// Options:  root           - root folder to display; default = /
+//           script         - location of the serverside AJAX file to use; default = jqueryFileTree.php
+//           folderEvent    - event to trigger expand/collapse; default = click
+//           expandSpeed    - default = 500 (ms); use -1 for no animation
+//           collapseSpeed  - default = 500 (ms); use -1 for no animation
+//           expandEasing   - easing function to use on expand (optional)
+//           collapseEasing - easing function to use on collapse (optional)
+//           multiFolder    - whether or not to limit the browser to one subfolder at a time
+//           loadMessage    - Message to display while initial tree loads (can be HTML)
+//
+// TERMS OF USE
+// 
+// This plugin is dual-licensed under the GNU General Public License and the MIT License and
+// is copyright 2008 A Beautiful Site, LLC. 
+//
+*/
+
+/*!
+# L.Catalog contains specific catalog settings and conversion tools.
+#
+#	This file part of:       VisiOmatic
+#
+#	Copyright: (C) 2014-2018 Emmanuel Bertin - IAP/CNRS/UPMC,
+#	                         Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 12/10/2018
+*/
+
+/*!
+# L.Control.Attribution.Logos adds a VisiOmatic logo to the map.
+#
+#  This file part of: VisiOmatic
+#
+#  Copyright:         (C) 2013-2014 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                                   Chiara Marmo - IDES/Paris-Sud,
+#
+#  Last modified: 07/03/2014
+*/
+
+/*!
+# L.Control.ExtraMap adds support for extra synchronized maps
+# (Picture-in-Picture style). Adapted from L.Control.MiniMap by Norkart
+# (original copyright notice reproduced below).
+#
+#	This file part of:	VisiOmatic
+#	Copyright:		(C) 2014,2016 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                                             Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 08/09/2016
+
+Original code Copyright (c) 2012-2015, Norkart AS
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
+      of conditions and the following disclaimer in the documentation and/or other materials
+      provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*!
+# L.Control.FullScreen adds a full screen toggle button to the map.
+# Adapted from the leaflet.fullscreen plugin by Bruno Bergot (fixed jake errors)
+# (original copyright notice reproduced below).
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2013-2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                             Chiara Marmo - IDES/Paris-Sud.
+#
+#	Last modified: 10/02/2014
+
+original code Copyright (c) 2013, Bruno Bergot
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
+      of conditions and the following disclaimer in the documentation and/or other materials
+      provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*!
+# L.Control.IIP adjusts the rendering of an IIP layer
+# (see http://iipimage.sourceforge.net/documentation/protocol/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2018 Emmanuel Bertin - IAP/CNRS/SorbonneU,
+#                                Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 14/05/2018
+*/
+
+/*!
+# L.Control.IIP.Catalog manages catalog overlays
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2018 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                          Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 25/04/2018
+*/
+
+/*!
+# L.Control.IIP.Channel manages the channel mixing of an IIP layer
+# (see http://iipimage.sourceforge.net/documentation/protocol/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2014-2017 IAP/CNRS/UPMC and GEOPS/Paris-Sud
+#
+#	Last modified:		17/05/2017
+*/
+
+/*!
+# L.Control.IIP.Doc adds online documentation to the VisiOmatic interface
+# (see http://iipimage.sourceforge.net/documentation/protocol/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#				                 Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified:		10/11/2015
+*/
+
+/*!
+# L.Control.IIP.Profile manages image profile diagrams
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2017 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                                Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 22/11/2017
+*/
+
+/*!
+# L.Control.IIP.Regions manages overlays of regions or points of interest
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC
+#
+#
+#	Last modified: 24/11/2015
+*/
+
+/*!
+# L.Control.IIP.image adjusts the basic rendering options of an IIP layer
+# (see http://iipimage.sourceforge.net/documentation/protocol/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2014,2017 Emmanuel Bertin - IAP/CNRS/UPMC,
+#				                      Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified:		29/11/2017
+*/
+
+/*!
+# L.Control.IIP.snapshot offers several options to take snapshots of the current image/field
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2014,2017 Emmanuel Bertin - IAP/CNRS/UPMC,
+#				                      Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified:		11/07/2017
+*/
+
+/*!
+# L.Control.Layers.IIP adds new features to the standard L.Control.Layers
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                     Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 22/03/2014
+*/
+
+/*!
+# L.Control.Reticle adds a reticle at the center of the map container
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                     Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified:		10/02/2014
+*/
+
+/*!
+# L.Control.Scale.WCS adds degree and pixel units to the standard L.Control.Scale
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014,2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                          Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 20/10/2015
+*/
+
+/*!
+# L.Control.Sidebar adds support for responsive side bars 
+# Adapted from the leaflet-sidebar plugin by Tobias Bieniek
+# (original copyright notice reproduced below).
+#
+#	This file part of:	VisiOmatic
+#	Copyright:		(C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                        Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 20/11/2015
+
+The MIT License (MIT)
+
+Copyright (c) 2013 Tobias Bieniek
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*!
+# L.Control.WCS Manage coordinate display and input
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2017 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                                Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 30/11/2017
+*/
+
+/*!
+# L.IIPUtils contains general utility methods
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2018 Emmanuel Bertin - IAP/CNRS/SorbonneU,
+#	                         Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 17/05/2018
+*/
+
+/*!
+# L.Projection.WCS computes a list of FITS WCS (World Coordinate System)
+# (de-)projections (see http://www.atnf.csiro.au/people/mcalabre/WCS/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014,2015 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                          Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 14/11/2015
+*/
+
+/*!
+# L.RGB.js manages RGB triplets
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC
+#
+#	Last modified:		04/11/2015
+*/
+
+/*!
+# L.TileLayer.IIP adds support for IIP layers to Leaflet
+# (see http://iipimage.sourceforge.net/documentation/protocol/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright:		(C) 2014-2017 IAP/CNRS/UPMC, IDES/Paris-Sud and C2RMF/CNRS
+#
+#	Last modified:		01/12/2017
+*/
+
+/*!
+# L.WCS emulates the FITS WCS (World Coordinate System) popular among
+# the astronomical community (see http://www.atnf.csiro.au/people/mcalabre/WCS/)
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2014-2017 Emmanuel Bertin - IAP/CNRS/UPMC,
+#                                Chiara Marmo - IDES/Paris-Sud
+#
+#	Last modified: 01/12/2017
+*/
+
+/*!
+# SpinBox implements a number spinbox with adaptive step increment
+# Adapted from JTSage's spinbox (original attribution below), with all the
+# jQuery and jQuery Mobile stuff removed.
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC
+#
+#	Last modified: 13/11/2015
+/*
+ * jQuery Mobile Framework : plugin to provide number spinbox.
+ * Copyright (c) JTSage
+ * CC 3.0 Attribution.  May be relicensed without permission/notification.
+ * https://github.com/jtsage/jquery-mobile-spinbox
+ */
+
+/*!
+# SpinBox implements a number spinbox with adaptive step increment
+# Adapted from Proto.io On/Off FlipSwitch designed by Anna Mitsinga:
+# https://proto.io/freebies/onoff/
+#
+#	This file part of:	VisiOmatic
+#
+#	Copyright: (C) 2015 Emmanuel Bertin - IAP/CNRS/UPMC
+#
+*/
