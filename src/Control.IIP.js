@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP adjusts the rendering of an IIP layer
 # (see http://iipimage.sourceforge.net/documentation/protocol/)
 #

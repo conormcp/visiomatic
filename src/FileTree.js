@@ -1,4 +1,4 @@
-/*
+/*!
 # FileTree parses directory trees serverside.
 # Adapted from the jQuery File Tree Plugin (original copyright notice reproduced
 # below).

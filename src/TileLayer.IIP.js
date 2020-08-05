@@ -1,4 +1,4 @@
-/*
+/*!
 # L.TileLayer.IIP adds support for IIP layers to Leaflet
 # (see http://iipimage.sourceforge.net/documentation/protocol/)
 #

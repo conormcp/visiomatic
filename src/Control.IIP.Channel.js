@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.Channel manages the channel mixing of an IIP layer
 # (see http://iipimage.sourceforge.net/documentation/protocol/)
 #

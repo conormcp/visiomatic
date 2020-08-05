@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Catalog contains specific catalog settings and conversion tools.
 #
 #	This file part of:       VisiOmatic

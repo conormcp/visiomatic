@@ -1,4 +1,4 @@
-/*
+/*!
 # Add an ellipse defined by its semi-major and semi-minor axes (in degrees), as
 # well as a position angle in degrees (east of north).
 #

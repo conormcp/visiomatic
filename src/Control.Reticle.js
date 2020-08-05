@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Reticle adds a reticle at the center of the map container
 #
 #	This file part of:	VisiOmatic

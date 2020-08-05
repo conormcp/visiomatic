@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.WCS Manage coordinate display and input
 #
 #	This file part of:	VisiOmatic

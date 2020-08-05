@@ -1,4 +1,4 @@
-/*
+/*!
 # SpinBox implements a number spinbox with adaptive step increment
 # Adapted from Proto.io On/Off FlipSwitch designed by Anna Mitsinga:
 # https://proto.io/freebies/onoff/

@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.Regions manages overlays of regions or points of interest
 #
 #	This file part of:	VisiOmatic

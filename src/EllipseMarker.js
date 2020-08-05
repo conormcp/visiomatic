@@ -1,4 +1,4 @@
-/*
+/*!
 # Add an ellipse defined by its semi-major and semi-minor axes (in pixels), as
 # well as a position angle in degrees (CCW from x axis).
 #

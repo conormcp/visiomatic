@@ -1,4 +1,4 @@
-/*
+/*!
 # L.IIPUtils contains general utility methods
 #
 #	This file part of:	VisiOmatic

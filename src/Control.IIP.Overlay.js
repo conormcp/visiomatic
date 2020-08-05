@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Layers.Overlay manages new overlays such as catalogs and plots
 #
 #	This file part of:	VisiOmatic

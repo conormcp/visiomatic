@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.FullScreen adds a full screen toggle button to the map.
 # Adapted from the leaflet.fullscreen plugin by Bruno Bergot (fixed jake errors)
 # (original copyright notice reproduced below).

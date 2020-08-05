@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Attribution.Logos adds a VisiOmatic logo to the map.
 #
 #  This file part of: VisiOmatic

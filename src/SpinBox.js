@@ -1,4 +1,4 @@
-/*
+/*!
 # SpinBox implements a number spinbox with adaptive step increment
 # Adapted from JTSage's spinbox (original attribution below), with all the
 # jQuery and jQuery Mobile stuff removed.

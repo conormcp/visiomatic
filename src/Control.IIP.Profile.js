@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.Profile manages image profile diagrams
 #
 #	This file part of:	VisiOmatic

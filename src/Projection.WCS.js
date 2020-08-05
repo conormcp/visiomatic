@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Projection.WCS computes a list of FITS WCS (World Coordinate System)
 # (de-)projections (see http://www.atnf.csiro.au/people/mcalabre/WCS/)
 #

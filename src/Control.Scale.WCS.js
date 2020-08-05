@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Scale.WCS adds degree and pixel units to the standard L.Control.Scale
 #
 #	This file part of:	VisiOmatic

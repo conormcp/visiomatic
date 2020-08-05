@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Layers.IIP adds new features to the standard L.Control.Layers
 #
 #	This file part of:	VisiOmatic

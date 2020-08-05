@@ -1,4 +1,4 @@
-/*
+/*!
 # L.RGB.js manages RGB triplets
 #
 #	This file part of:	VisiOmatic

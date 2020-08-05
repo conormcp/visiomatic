@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.ExtraMap adds support for extra synchronized maps
 # (Picture-in-Picture style). Adapted from L.Control.MiniMap by Norkart
 # (original copyright notice reproduced below).

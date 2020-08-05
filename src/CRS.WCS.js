@@ -1,4 +1,4 @@
-/*
+/*!
 # L.WCS emulates the FITS WCS (World Coordinate System) popular among
 # the astronomical community (see http://www.atnf.csiro.au/people/mcalabre/WCS/)
 #

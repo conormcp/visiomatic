@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.Catalog manages catalog overlays
 #
 #	This file part of:	VisiOmatic

@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.Doc adds online documentation to the VisiOmatic interface
 # (see http://iipimage.sourceforge.net/documentation/protocol/)
 #

@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.Sidebar adds support for responsive side bars 
 # Adapted from the leaflet-sidebar plugin by Tobias Bieniek
 # (original copyright notice reproduced below).

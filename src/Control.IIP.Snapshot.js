@@ -1,4 +1,4 @@
-/*
+/*!
 # L.Control.IIP.snapshot offers several options to take snapshots of the current image/field
 #	This file part of:	VisiOmatic
 #
