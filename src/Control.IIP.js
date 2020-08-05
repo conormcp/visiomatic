@@ -9,104 +9,121 @@
 #
 #	Last modified: 14/05/2018
 */
-
-if (typeof require !== 'undefined') {
-	var $ = require('jquery');
-}
+import $ from "jquery";
+import "spectrum-colorpicker/spectrum.css";
+import "spectrum-colorpicker";
 
 L.Control.IIP = L.Control.extend({
-	options: {
-		title: 'a control related to IIPImage',
-		collapsed: true,
-		position: 'topleft'
-	},
+  options: {
+    title: "a control related to IIPImage",
+    collapsed: true,
+    position: "topleft",
+  },
 
-	initialize: function (baseLayers,  options) {
-		L.setOptions(this, options);
-		this._className = 'leaflet-control-iip';
-		this._id = 'leaflet-iipimage';
-		this._layers = baseLayers;
-	},
+  initialize: function (baseLayers, options) {
+    L.setOptions(this, options);
+    this._className = "leaflet-control-iip";
+    this._id = "leaflet-iipimage";
+    this._layers = baseLayers;
+  },
 
-	// addTo can be used to add the regular leaflet controls or to the sidebar
-	addTo: function (dest) {
-		if (dest._sidebar) {
-			this._sidebar = dest;
-		// dest is a sidebar class instance
-			this._map = dest._map;
-			this._dialog = L.DomUtil.create('div', this._className + '-dialog');
-			dest.addTab(this._id, this._className, this.options.title, this._dialog,
-			   this._sideClass);
-			this._map.on('layeradd', this._checkIIP, this);
-			return dest;
-		} else {
-			return L.Control.prototype.addTo.call(this, dest);
-		}
-	},
+  // addTo can be used to add the regular leaflet controls or to the sidebar
+  addTo: function (dest) {
+    if (dest._sidebar) {
+      this._sidebar = dest;
+      // dest is a sidebar class instance
+      this._map = dest._map;
+      this._dialog = L.DomUtil.create("div", this._className + "-dialog");
+      dest.addTab(
+        this._id,
+        this._className,
+        this.options.title,
+        this._dialog,
+        this._sideClass
+      );
+      this._map.on("layeradd", this._checkIIP, this);
+      return dest;
+    } else {
+      return L.Control.prototype.addTo.call(this, dest);
+    }
+  },
 
-	onAdd: function (map) {
-		var className = this._className,
-		 id = this._id,
-		 container = this._container = L.DomUtil.create('div', className + ' leaflet-bar');
-		//Makes this work on IE10 Touch devices by stopping it from firing a mouseout event when the touch is released
-		container.setAttribute('aria-haspopup', true);
+  // eslint-disable-next-line no-unused-vars
+  onAdd: function (map) {
+    var className = this._className,
+      id = this._id,
+      container = (this._container = L.DomUtil.create(
+        "div",
+        className + " leaflet-bar"
+      ));
+    //Makes this work on IE10 Touch devices by stopping it from firing a mouseout event when the touch is released
+    container.setAttribute("aria-haspopup", true);
 
-		L.DomEvent
-				.disableClickPropagation(container)
-				.disableScrollPropagation(container);
+    L.DomEvent.disableClickPropagation(container).disableScrollPropagation(
+      container
+    );
 
-		this._dialog = L.DomUtil.create('div', className + '-dialog', container);
-		if (this.options.collapsed) {
-			if (!L.Browser.android) {
-				L.DomEvent
-					.on(container, 'mouseover', this._expand, this)
-					.on(container, 'mouseout', this._collapse, this);
-			}
+    this._dialog = L.DomUtil.create("div", className + "-dialog", container);
+    if (this.options.collapsed) {
+      if (!L.Browser.android) {
+        L.DomEvent.on(container, "mouseover", this._expand, this).on(
+          container,
+          "mouseout",
+          this._collapse,
+          this
+        );
+      }
 
-			var toggle = this._toggle = L.DomUtil.create('a', className + '-toggle leaflet-bar', container);
-			toggle.href = '#';
-			toggle.id = id + '-toggle';
-			toggle.title = this.options.title;
+      var toggle = (this._toggle = L.DomUtil.create(
+        "a",
+        className + "-toggle leaflet-bar",
+        container
+      ));
+      toggle.href = "#";
+      toggle.id = id + "-toggle";
+      toggle.title = this.options.title;
 
-			if (L.Browser.touch) {
-				L.DomEvent
-				    .on(toggle, 'click', L.DomEvent.stop, this)
-				    .on(toggle, 'click', this._expand, this);
-			}
-			else {
-				L.DomEvent.on(toggle, 'focus', this._expand, this);
-			}
+      if (L.Browser.touch) {
+        L.DomEvent.on(toggle, "click", L.DomEvent.stop, this).on(
+          toggle,
+          "click",
+          this._expand,
+          this
+        );
+      } else {
+        L.DomEvent.on(toggle, "focus", this._expand, this);
+      }
 
-			this._map.on('click', this._collapse, this);
-			// TODO keyboard accessibility
-		} else {
-			this._expand();
-		}
+      this._map.on("click", this._collapse, this);
+      // TODO keyboard accessibility
+    } else {
+      this._expand();
+    }
 
-//		this._checkIIP();
-		this._map.on('layeradd', this._checkIIP, this);
+    //		this._checkIIP();
+    this._map.on("layeradd", this._checkIIP, this);
 
-		return	this._container;
-	},
+    return this._container;
+  },
 
-	_checkIIP: function (e) {
-		var layer = e.layer;
+  _checkIIP: function (e) {
+    var layer = e.layer;
 
-		// Exit if not an IIP layer
-		if (!layer || !layer.iipdefault) {
-			return;
-		}
-		this._layer = layer;
-		if (this._reloadFlag) {
-			layer.once('load', this._resetDialog, this);
-		} else {
-			this._initDialog();
-			this._reloadFlag = true;
-		}
-	},
+    // Exit if not an IIP layer
+    if (!layer || !layer.iipdefault) {
+      return;
+    }
+    this._layer = layer;
+    if (this._reloadFlag) {
+      layer.once("load", this._resetDialog, this);
+    } else {
+      this._initDialog();
+      this._reloadFlag = true;
+    }
+  },
 
-	_initDialog: function () {
-/*
+  _initDialog: function () {
+    /*
 		var className = this._className,
 			container = this._container,
 			dialog = this._dialog,
@@ -115,379 +132,448 @@ L.Control.IIP = L.Control.extend({
 		dialog.innerHTML = '';
 */
     // Setup the rest of the dialog window here
-	},
+  },
 
-	_resetDialog: function () {
-		this._dialog.innerHTML = '';
-		this._initDialog();
-	},
+  _resetDialog: function () {
+    this._dialog.innerHTML = "";
+    this._initDialog();
+  },
 
-	_addDialogBox: function (id) {
-		var box = L.DomUtil.create('div', this._className + '-box', this._dialog);
-		if (id) {
-			box.id = id;
-		}
-		return box;
-	},
+  _addDialogBox: function (id) {
+    var box = L.DomUtil.create("div", this._className + "-box", this._dialog);
+    if (id) {
+      box.id = id;
+    }
+    return box;
+  },
 
-	_addDialogLine: function (label, dialogBox) {
-		var line = L.DomUtil.create('div', this._className + '-line', dialogBox),
-		 text = L.DomUtil.create('div', this._className + '-label', line);
-		text.innerHTML = label;
-		return line;
-	},
+  _addDialogLine: function (label, dialogBox) {
+    var line = L.DomUtil.create("div", this._className + "-line", dialogBox),
+      text = L.DomUtil.create("div", this._className + "-label", line);
+    text.innerHTML = label;
+    return line;
+  },
 
-	_addDialogElement: function (line) {
-		return L.DomUtil.create('div', this._className + '-element', line);
-	},
+  _addDialogElement: function (line) {
+    return L.DomUtil.create("div", this._className + "-element", line);
+  },
 
-	_expand: function () {
-		L.DomUtil.addClass(this._container, this._className + '-expanded');
-	},
+  _expand: function () {
+    L.DomUtil.addClass(this._container, this._className + "-expanded");
+  },
 
-	_collapse: function () {
-		this._container.className = this._container.className.replace(' ' + this._className + '-expanded', '');
-	},
-
-  /**
-* Get currently active base layer on the map
-* @return {Object} l where l.name - layer name on the control,
-* l.layer is L.TileLayer, l.overlay is overlay layer.
-*/
-	getActiveBaseLayer: function () {
-		return this._activeBaseLayer;
-	},
+  _collapse: function () {
+    this._container.className = this._container.className.replace(
+      " " + this._className + "-expanded",
+      ""
+    );
+  },
 
   /**
-* Get currently active overlay layers on the map
-* @return {{layerId: l}} where layerId is <code>L.stamp(l.layer)</code>
-* and l @see #getActiveBaseLayer jsdoc.
-*/
+   * Get currently active base layer on the map
+   * @return {Object} l where l.name - layer name on the control,
+   * l.layer is L.TileLayer, l.overlay is overlay layer.
+   */
+  getActiveBaseLayer: function () {
+    return this._activeBaseLayer;
+  },
 
-	_findActiveBaseLayer: function () {
-		var layers = this._layers;
-		this._prelayer = undefined;
-		for (var layername in layers) {
-			var layer = layers[layername];
-			if (!layer.overlay) {
-				if (!layer._map) {
-					this._prelayer = layer;
-				} else if (this._map.hasLayer(layer) && layer.iipdefault) {
-					return layer;
-				}
-			}
-		}
-		return undefined;
-	},
+  /**
+   * Get currently active overlay layers on the map
+   * @return {{layerId: l}} where layerId is <code>L.stamp(l.layer)</code>
+   * and l @see #getActiveBaseLayer jsdoc.
+   */
 
-	_createButton: function (className, parent, subClassName, fn, title) {
-		var button = L.DomUtil.create('a', className, parent);
-		button.target = '_blank';
-		if (subClassName) {
-			button.id = className + '-' + subClassName;
-		}
-		if (fn) {
-			L.DomEvent.on(button, 'click touch', fn, this);
-		}
-		if (title) {
-			button.title = title;
-		}
-		return button;
-	},
+  _findActiveBaseLayer: function () {
+    var layers = this._layers;
+    this._prelayer = undefined;
+    for (var layername in layers) {
+      var layer = layers[layername];
+      if (!layer.overlay) {
+        if (!layer._map) {
+          this._prelayer = layer;
+        } else if (this._map.hasLayer(layer) && layer.iipdefault) {
+          return layer;
+        }
+      }
+    }
+    return undefined;
+  },
 
-	_createRadioButton: function (className, parent, value, checked, fn, title) {
-		var button = L.DomUtil.create('input', className, parent);
+  _createButton: function (className, parent, subClassName, fn, title) {
+    var button = L.DomUtil.create("a", className, parent);
+    button.target = "_blank";
+    if (subClassName) {
+      button.id = className + "-" + subClassName;
+    }
+    if (fn) {
+      L.DomEvent.on(button, "click touch", fn, this);
+    }
+    if (title) {
+      button.title = title;
+    }
+    return button;
+  },
 
-		button.type = 'radio';
-		button.name = className;
-		button.value = value;
-		button.checked = checked;
-		if (fn) {
-			L.DomEvent.on(button, 'click touch', function () {
-				fn(value);
-			}, this);
-		}
+  _createRadioButton: function (className, parent, value, checked, fn, title) {
+    var button = L.DomUtil.create("input", className, parent);
 
-		var label =  L.DomUtil.create('label', className, parent);
+    button.type = "radio";
+    button.name = className;
+    button.value = value;
+    button.checked = checked;
+    if (fn) {
+      L.DomEvent.on(
+        button,
+        "click touch",
+        function () {
+          fn(value);
+        },
+        this
+      );
+    }
 
-		label.htmlFor = button.id = className + '-' + value;
-		if (title) {
-			label.title = title;
-		}
-		return button;
-	},
+    var label = L.DomUtil.create("label", className, parent);
 
-	_createSelectMenu: function (className, parent, items, disabled, selected, fn, title) {
-		// Wrapper around the select element for better positioning and sizing
-		var	div =  L.DomUtil.create('div', className, parent),
-			select = L.DomUtil.create('select', className, div),
-			choose = document.createElement('option'),
-			opt = select.opt = [],
-			index;
+    label.htmlFor = button.id = className + "-" + value;
+    if (title) {
+      label.title = title;
+    }
+    return button;
+  },
 
-		choose.text = 'choose';
-		choose.disabled = true;
-		if (!selected || selected < 0) {
-			choose.selected = true;
-		}
-		select.add(choose, null);
-		for (var i in items) {
-			index = parseInt(i, 10);
-			opt[index] = document.createElement('option');
-			opt[index].text = items[index];
-			opt[index].value = index;
-			if (disabled && disabled[index]) {
-				opt[index].disabled = true;
-			} else if (index === selected) {
-				opt[index].selected = true;
-			}
-			select.add(opt[index], null);
-		}
+  _createSelectMenu: function (
+    className,
+    parent,
+    items,
+    disabled,
+    selected,
+    fn,
+    title
+  ) {
+    // Wrapper around the select element for better positioning and sizing
+    var div = L.DomUtil.create("div", className, parent),
+      select = L.DomUtil.create("select", className, div),
+      choose = document.createElement("option"),
+      opt = (select.opt = []),
+      index;
 
-		// Fix collapsing dialog issue when selecting a channel
-		if (this._container && !L.Browser.android && this.options.collapsed) {
-			L.DomEvent.on(select, 'mousedown', function () {
-				L.DomEvent.off(this._container, 'mouseout', this._collapse, this);
-				this.collapsedOff = true;
-			}, this);
+    choose.text = "choose";
+    choose.disabled = true;
+    if (!selected || selected < 0) {
+      choose.selected = true;
+    }
+    select.add(choose, null);
+    for (var i in items) {
+      index = parseInt(i, 10);
+      opt[index] = document.createElement("option");
+      opt[index].text = items[index];
+      opt[index].value = index;
+      if (disabled && disabled[index]) {
+        opt[index].disabled = true;
+      } else if (index === selected) {
+        opt[index].selected = true;
+      }
+      select.add(opt[index], null);
+    }
 
-			L.DomEvent.on(this._container, 'mouseover', function () {
-				if (this.collapsedOff) {
-					L.DomEvent.on(this._container, 'mouseout', this._collapse, this);
-					this.collapsedOff = false;
-				}
-			}, this);
-		}
+    // Fix collapsing dialog issue when selecting a channel
+    if (this._container && !L.Browser.android && this.options.collapsed) {
+      L.DomEvent.on(
+        select,
+        "mousedown",
+        function () {
+          L.DomEvent.off(this._container, "mouseout", this._collapse, this);
+          this.collapsedOff = true;
+        },
+        this
+      );
 
-		if (fn) {
-			L.DomEvent.on(select, 'change keyup', fn, this);
-		}
-		if (title) {
-			div.title = title;
-		}
+      L.DomEvent.on(
+        this._container,
+        "mouseover",
+        function () {
+          if (this.collapsedOff) {
+            L.DomEvent.on(this._container, "mouseout", this._collapse, this);
+            this.collapsedOff = false;
+          }
+        },
+        this
+      );
+    }
 
-		return select;
-	},
+    if (fn) {
+      L.DomEvent.on(select, "change keyup", fn, this);
+    }
+    if (title) {
+      div.title = title;
+    }
 
+    return select;
+  },
 
-	_createColorPicker: function (className, parent, subClassName, defaultColor,
-	    fn, storageKey, title) {
-		var _this = this,
-			colpick = L.DomUtil.create('input', className, parent);
+  _createColorPicker: function (
+    className,
+    parent,
+    subClassName,
+    defaultColor,
+    fn,
+    storageKey,
+    title
+  ) {
+    var _this = this,
+      colpick = L.DomUtil.create("input", className, parent);
 
-		colpick.type = 'color';
-		colpick.value = defaultColor;
-		colpick.id = className + '-' + subClassName;
+    colpick.type = "color";
+    colpick.value = defaultColor;
+    colpick.id = className + "-" + subClassName;
 
-		$(document).ready(function () {
-			$(colpick).spectrum({
-				showInput: true,
-				appendTo: '#' + _this._id,
-				showPaletteOnly: true,
-				togglePaletteOnly: true,
-				localStorageKey: storageKey,
-				change: function (color) {
-					colpick.value = color.toHexString();
-				}
-			}).on('show.spectrum', function () {
-				if (_this._container) {
-					L.DomEvent.off(_this._container, 'mouseout', _this._collapse);
-				}
-			});
-			if (fn) {
-				$(colpick).on('change', fn);
-			}
-			if (title) {
-				$('#' + colpick.id + '+.sp-replacer').prop('title', title);
-			}
-		});
+    $(document).ready(function () {
+      $(colpick)
+        .spectrum({
+          showInput: true,
+          appendTo: "#" + _this._id,
+          showPaletteOnly: true,
+          togglePaletteOnly: true,
+          localStorageKey: storageKey,
+          change: function (color) {
+            colpick.value = color.toHexString();
+          },
+        })
+        .on("show.spectrum", function () {
+          if (_this._container) {
+            L.DomEvent.off(_this._container, "mouseout", _this._collapse);
+          }
+        });
+      if (fn) {
+        $(colpick).on("change", fn);
+      }
+      if (title) {
+        $("#" + colpick.id + "+.sp-replacer").prop("title", title);
+      }
+    });
 
-		return colpick;
-	},
+    return colpick;
+  },
 
+  _addSwitchInput: function (layer, box, label, attr, title, id, checked) {
+    var line = this._addDialogLine(label, box),
+      elem = this._addDialogElement(line),
+      flip = (elem.flip = L.flipswitch(elem, {
+        checked: checked,
+        id: id,
+        title: title,
+      }));
 
-	_addSwitchInput:	function (layer, box, label, attr, title, id, checked) {
-		var line = this._addDialogLine(label, box),
-			elem = this._addDialogElement(line),
-			flip = elem.flip = L.flipswitch(elem, {
-				checked: checked,
-				id: id,
-				title: title
-			});
+    flip.on(
+      "change",
+      function () {
+        this._onInputChange(layer, attr, flip.value());
+      },
+      this
+    );
 
-		flip.on('change', function () {
-			this._onInputChange(layer, attr, flip.value());
-		}, this);
+    return elem;
+  },
 
-		return elem;
-	},
+  _addNumericalInput: function (
+    layer,
+    box,
+    label,
+    attr,
+    title,
+    id,
+    initValue,
+    step,
+    min,
+    max,
+    func
+  ) {
+    var line = this._addDialogLine(label, box),
+      elem = this._addDialogElement(line),
+      spinbox = (elem.spinbox = L.spinbox(elem, {
+        step: step,
+        dmin: min,
+        dmax: max,
+        initValue: initValue,
+        title: title,
+      }));
 
-	_addNumericalInput:	function (layer, box, label, attr, title, id, initValue,
-	  step, min, max, func) {
-		var line = this._addDialogLine(label, box),
-			elem = this._addDialogElement(line),
-			spinbox = elem.spinbox = L.spinbox(elem, {
-				step: step,
-				dmin:  min,
-				dmax:  max,
-				initValue: initValue,
-				title: title
-			});
+    spinbox.on(
+      "change",
+      function () {
+        L.IIPUtils.flashElement(spinbox._input);
+        this._onInputChange(layer, attr, spinbox.value(), func);
+      },
+      this
+    );
 
-		spinbox.on('change', function () {
-			L.IIPUtils.flashElement(spinbox._input);
-			this._onInputChange(layer, attr, spinbox.value(), func);
-		}, this);
+    return elem;
+  },
 
-		return elem;
-	},
+  _updateInput: function (elem, value) {
+    if (elem.spinbox) {
+      elem.spinbox.value(value);
+    } else if (elem.flip) {
+      elem.flip.value(value);
+    }
+  },
 
-	_updateInput:	function (elem, value) {
-		if (elem.spinbox) {
-			elem.spinbox.value(value);
-		} else if (elem.flip) {
-			elem.flip.value(value);
-		}
-	},
+  _spinboxStep: function (min, max) {
+    var step = parseFloat(
+      (Math.abs(max === min ? max : max - min) * 0.01).toPrecision(1)
+    );
 
-	_spinboxStep: function (min, max) {
-		var step = parseFloat((Math.abs(max === min ? max : max - min) *
-			         0.01).toPrecision(1));
+    return step === 0.0 ? 1.0 : step;
+  },
 
-		return step === 0.0 ? 1.0 : step;
-	},
+  _onInputChange: function (layer, pname, value, func) {
+    var pnamearr = pname.split(/\[|\]/);
+    if (pnamearr[1]) {
+      layer[pnamearr[0]][parseInt(pnamearr[1], 10)] = value;
+    } else {
+      layer[pnamearr[0]] = value;
+    }
+    if (func) {
+      func(layer);
+    }
+    layer.redraw();
+  },
 
-	_onInputChange:	function (layer, pname, value, func) {
+  _updateLayerList: function () {
+    if (!this._dialog) {
+      return this;
+    }
 
-		var pnamearr = pname.split(/\[|\]/);
-		if (pnamearr[1]) {
-			layer[pnamearr[0]][parseInt(pnamearr[1], 10)] = value;
-		}	else {
-			layer[pnamearr[0]] = value;
-		}
-		if (func) {
-			func(layer);
-		}
-		layer.redraw();
-	},
+    if (this._layerList) {
+      L.DomUtil.empty(this._layerList);
+    } else {
+      this._layerList = L.DomUtil.create(
+        "div",
+        "leaflet-control-iip" + "-layerlist",
+        this._dialog
+      );
+    }
 
-	_updateLayerList: function () {
-		if (!this._dialog) {
-			return this;
-		}
+    for (var i in this._layers) {
+      this._addLayerItem(this._layers[i]);
+    }
 
-		if (this._layerList) {
-			L.DomUtil.empty(this._layerList);
-		} else {
-			this._layerList = L.DomUtil.create('div', 'leaflet-control-iip' + '-layerlist',
-			  this._dialog);
-		}
+    return this;
+  },
 
-		for (var i in this._layers) {
-			this._addLayerItem(this._layers[i]);
-		}
+  _addLayerItem: function (obj) {
+    var _this = this,
+      layerItem = L.DomUtil.create("div", "leaflet-control-iip-layer"),
+      inputdiv = L.DomUtil.create(
+        "div",
+        "leaflet-control-iip-layerswitch",
+        layerItem
+      );
 
-		return this;
-	},
+    if (obj.layer.notReady) {
+      L.DomUtil.create("div", "leaflet-control-iip-activity", inputdiv);
+    } else {
+      var input,
+        checked = this._map.hasLayer(obj.layer);
+      input = document.createElement("input");
+      input.type = "checkbox";
+      input.className = "leaflet-control-iip-selector";
+      input.defaultChecked = checked;
+      input.layerId = L.stamp(obj.layer);
+      L.DomEvent.on(
+        input,
+        "click",
+        function () {
+          var i,
+            input,
+            obj,
+            inputs = this._layerList.getElementsByTagName("input"),
+            inputsLen = inputs.length;
 
-	_addLayerItem: function (obj) {
-		var _this = this,
-		 layerItem = L.DomUtil.create('div', 'leaflet-control-iip-layer'),
-		 inputdiv = L.DomUtil.create('div', 'leaflet-control-iip-layerswitch', layerItem);
+          this._handlingClick = true;
 
-		if (obj.layer.notReady) {
-			L.DomUtil.create('div', 'leaflet-control-iip-activity', inputdiv);
-		} else {
-			var input,
-			    checked = this._map.hasLayer(obj.layer);
-			input = document.createElement('input');
-			input.type = 'checkbox';
-			input.className = 'leaflet-control-iip-selector';
-			input.defaultChecked = checked;
-			input.layerId = L.stamp(obj.layer);
-			L.DomEvent.on(input, 'click', function () {
-				var i, input, obj,
-			      inputs = this._layerList.getElementsByTagName('input'),
-				    inputsLen = inputs.length;
+          for (i = 0; i < inputsLen; i++) {
+            input = inputs[i];
+            if (!("layerId" in input)) {
+              continue;
+            }
+            obj = this._layers[input.layerId];
+            if (input.checked && !this._map.hasLayer(obj.layer)) {
+              obj.layer.addTo(this._map);
+            } else if (!input.checked && this._map.hasLayer(obj.layer)) {
+              this._map.removeLayer(obj.layer);
+            }
+          }
 
-				this._handlingClick = true;
+          this._handlingClick = false;
+        },
+        this
+      );
+      inputdiv.appendChild(input);
+    }
 
-				for (i = 0; i < inputsLen; i++) {
-					input = inputs[i];
-					if (!('layerId' in input)) {
-						continue;
-					}
-					obj = this._layers[input.layerId];
-					if (input.checked && !this._map.hasLayer(obj.layer)) {
-						obj.layer.addTo(this._map);
-					} else if (!input.checked && this._map.hasLayer(obj.layer)) {
-						this._map.removeLayer(obj.layer);
-					}
-				}
+    var name = L.DomUtil.create(
+      "div",
+      "leaflet-control-iip-layername",
+      layerItem
+    );
+    name.innerHTML = " " + obj.name;
+    name.style.textShadow = "0px 0px 5px " + obj.layer.nameColor;
 
-				this._handlingClick = false;
-			}, this);
-			inputdiv.appendChild(input);
-		}
-	
-		var name = L.DomUtil.create('div', 'leaflet-control-iip-layername', layerItem);
-		name.innerHTML = ' ' + obj.name;
-		name.style.textShadow = '0px 0px 5px ' + obj.layer.nameColor;
+    this._createButton(
+      "leaflet-control-iip-trash",
+      layerItem,
+      undefined,
+      function () {
+        _this.removeLayer(obj.layer);
+        if (!obj.notReady) {
+          _this._map.removeLayer(obj.layer);
+        }
+      },
+      "Delete layer"
+    );
 
-		this._createButton('leaflet-control-iip-trash',
-			layerItem,
-			undefined,
-			function () {
-				_this.removeLayer(obj.layer);
-				if (!obj.notReady) {
-					_this._map.removeLayer(obj.layer);
-				}
-			},
-			'Delete layer'
-		);
+    this._layerList.appendChild(layerItem);
 
-		this._layerList.appendChild(layerItem);
+    return layerItem;
+  },
 
-		return layerItem;
-	},
+  addLayer: function (layer, name, index) {
+    layer.on("add remove", this._onLayerChange, this);
 
-	addLayer: function (layer, name, index) {
-		layer.on('add remove', this._onLayerChange, this);
+    var id = L.stamp(layer);
 
-		var id = L.stamp(layer);
+    this._layers[id] = {
+      layer: layer,
+      name: name,
+      index: index,
+    };
 
-		this._layers[id] = {
-			layer: layer,
-			name: name,
-			index: index
-		};
+    return this._updateLayerList();
+  },
 
-		return this._updateLayerList();
-	},
+  removeLayer: function (layer) {
+    layer.off("add remove", this._onLayerChange, this);
+    layer.fire("trash", { index: this._layers[L.stamp(layer)].index });
+    layer.off("trash");
 
-	removeLayer: function (layer) {
-		layer.off('add remove', this._onLayerChange, this);
-		layer.fire('trash', {index: this._layers[L.stamp(layer)].index});
-		layer.off('trash');
+    delete this._layers[L.stamp(layer)];
+    return this._updateLayerList();
+  },
 
-		delete this._layers[L.stamp(layer)];
-		return this._updateLayerList();
-	},
+  _onLayerChange: function (e) {
+    if (!this._handlingClick) {
+      this._updateLayerList();
+    }
 
-	_onLayerChange: function (e) {
-		if (!this._handlingClick) {
-			this._updateLayerList();
-		}
+    var obj = this._layers[L.stamp(e.target)],
+      type = e.type === "add" ? "overlayadd" : "overlayremove";
 
-		var obj = this._layers[L.stamp(e.target)],
-		    type = e.type === 'add' ? 'overlayadd' : 'overlayremove';
-
-		this._map.fire(type, obj);
-	}
-
+    this._map.fire(type, obj);
+  },
 });
 
 L.control.iip = function (baseLayers, options) {
-	return new L.Control.IIP(baseLayers, options);
+  return new L.Control.IIP(baseLayers, options);
 };
-

@@ -9,33 +9,41 @@
 #	Last modified:		10/02/2014
 */
 L.Control.Reticle = L.Control.extend({
-	options: {
-		position: 'bottomleft'
-	},
+  options: {
+    position: "bottomleft",
+  },
 
-	onAdd: function (map) {
-		// Create central reticle
-		var reticle = this._reticle = L.DomUtil.create('div', 'leaflet-reticle', this._map._controlContainer),
-			style = reticle.style;
-		style.position = 'absolute';
-		style.left = '50%';
-		style.bottom = '50%';
-		style.textAlign = 'center';
-		style.verticalAlign = 'middle';
-		style.pointerEvents = 'none';
-		reticle.innerHTML = '';
+  // eslint-disable-next-line no-unused-vars
+  onAdd: function (map) {
+    // Create central reticle
+    var reticle = (this._reticle = L.DomUtil.create(
+        "div",
+        "leaflet-reticle",
+        this._map._controlContainer
+      )),
+      style = reticle.style;
+    style.position = "absolute";
+    style.left = "50%";
+    style.bottom = "50%";
+    style.textAlign = "center";
+    style.verticalAlign = "middle";
+    style.pointerEvents = "none";
+    reticle.innerHTML = "";
 
-		var container = this._container = L.DomUtil.create('div', 'leaflet-dummy');
+    var container = (this._container = L.DomUtil.create(
+      "div",
+      "leaflet-dummy"
+    ));
 
-		return container;
-	},
+    return container;
+  },
 
-	onRemove: function (map) {
-		this._reticle.parentNode.removeChild(this._reticle);
-	}
-
+  // eslint-disable-next-line no-unused-vars
+  onRemove: function (map) {
+    this._reticle.parentNode.removeChild(this._reticle);
+  },
 });
 
 L.control.reticle = function (options) {
-    return new L.Control.Reticle(options);
+  return new L.Control.Reticle(options);
 };

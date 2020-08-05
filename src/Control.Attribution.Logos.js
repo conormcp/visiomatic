@@ -11,43 +11,45 @@
 
 // Remove this ugly Pipe sign
 L.Control.Attribution.include({
-	_update: function () {
-		if (!this._map) { return; }
+  _update: function () {
+    if (!this._map) {
+      return;
+    }
 
-		var attribs = [];
+    var attribs = [];
 
-		for (var i in this._attributions) {
-			if (this._attributions[i]) {
-				attribs.push(i);
-			}
-		}
+    for (var i in this._attributions) {
+      if (this._attributions[i]) {
+        attribs.push(i);
+      }
+    }
 
-		var prefixAndAttribs = [];
+    var prefixAndAttribs = [];
 
-		if (this.options.prefix) {
-			prefixAndAttribs.push(this.options.prefix);
-		}
-		if (attribs.length) {
-			prefixAndAttribs.push(attribs.join(', '));
-		}
+    if (this.options.prefix) {
+      prefixAndAttribs.push(this.options.prefix);
+    }
+    if (attribs.length) {
+      prefixAndAttribs.push(attribs.join(", "));
+    }
 
-		this._container.innerHTML = prefixAndAttribs.join(' &#169; ');
-	}
+    this._container.innerHTML = prefixAndAttribs.join(" &#169; ");
+  },
 });
 
 // Set Attribution prefix to a series of clickable logos
 L.Map.addInitHook(function () {
-	if (this.options.visiomaticLogo !== false &&
-	 this.options.attributionControl) {
-		this.attributionControl.setPrefix(
-			'<a id="logo-visiomatic" class="leaflet-control-attribution-logo"' +
-			 'href="http://visiomatic.org">&nbsp;</a>' +
-			 '<a id="logo-iipimage" class="leaflet-control-attribution-logo"' +
-			 'href="http://iipimage.sourceforge.net">&nbsp;</a>' +
-			 '<a id="logo-leaflet" class="leaflet-control-attribution-logo"' +
-			 'href="http://leafletjs.com">&nbsp;</a>'
-		);
-	}
+  if (
+    this.options.visiomaticLogo !== false &&
+    this.options.attributionControl
+  ) {
+    this.attributionControl.setPrefix(
+      '<a id="logo-visiomatic" class="leaflet-control-attribution-logo"' +
+        'href="http://visiomatic.org">&nbsp;</a>' +
+        '<a id="logo-iipimage" class="leaflet-control-attribution-logo"' +
+        'href="http://iipimage.sourceforge.net">&nbsp;</a>' +
+        '<a id="logo-leaflet" class="leaflet-control-attribution-logo"' +
+        'href="http://leafletjs.com">&nbsp;</a>'
+    );
+  }
 });
-
-

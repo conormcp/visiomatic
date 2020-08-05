@@ -10,55 +10,55 @@
 */
 
 L.FlipSwitch = L.Evented.extend({
-	options: {
-		// All widget options
-		checked: false,
-		title: 'Click to switch',
-		className: 'leaflet-flipswitch',
-		id: 'leaflet-flipswitch'
-	},
+  options: {
+    // All widget options
+    checked: false,
+    title: "Click to switch",
+    className: "leaflet-flipswitch",
+    id: "leaflet-flipswitch",
+  },
 
-	initialize: function (parent, options) {
-		options = L.setOptions(this, options);
-		var _this = this,
-			  className = options.className,
-			  button = L.DomUtil.create('div', className, parent),
-				input = this._input = L.DomUtil.create('input', className, button),
-				label = L.DomUtil.create('label', className, button);
+  initialize: function (parent, options) {
+    options = L.setOptions(this, options);
+    var className = options.className,
+      button = L.DomUtil.create("div", className, parent),
+      input = (this._input = L.DomUtil.create("input", className, button)),
+      label = L.DomUtil.create("label", className, button);
 
-		input.type = 'checkbox';
-		input.name = options.className;
-		input.checked = options.checked;
-		label.htmlFor = input.id = options.id;
-		if (options.title) {
-			label.title = options.title;
-		}
+    input.type = "checkbox";
+    input.name = options.className;
+    input.checked = options.checked;
+    label.htmlFor = input.id = options.id;
+    if (options.title) {
+      label.title = options.title;
+    }
 
-		L.DomUtil.create('span', className + '-inner', label);
-		L.DomUtil.create('span', className + '-button', label);
+    L.DomUtil.create("span", className + "-inner", label);
+    L.DomUtil.create("span", className + "-button", label);
 
-		L.DomEvent
-				.disableClickPropagation(button)
-				.disableScrollPropagation(button);
-		L.DomEvent.on(input, 'change', function () {
-			this.fire('change');
-		}, this);
+    L.DomEvent.disableClickPropagation(button).disableScrollPropagation(button);
+    L.DomEvent.on(
+      input,
+      "change",
+      function () {
+        this.fire("change");
+      },
+      this
+    );
 
-		return button;
-	},
+    return button;
+  },
 
-	value: function (val) {
-		if (val === undefined) {
-			return this._input.checked;
-		}
-		else {
-			this._input.checked = val ? true : false;
-			return this;
-		}
-	}
-
+  value: function (val) {
+    if (val === undefined) {
+      return this._input.checked;
+    } else {
+      this._input.checked = val ? true : false;
+      return this;
+    }
+  },
 });
 
 L.flipswitch = function (parent, options) {
-	return new L.FlipSwitch(parent, options);
+  return new L.FlipSwitch(parent, options);
 };
