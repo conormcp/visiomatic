@@ -348,12 +348,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
-	background-image: url(images/416d91365b44e4b4f4777663e6f009f3.png);
+	background-image: url(images/layers-416d91365b44e4b4f4777663e6f009f3.png);
 	width: 36px;
 	height: 36px;
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
-	background-image: url(images/8f2c4d11474275fbc1614b9098334eae.png);
+	background-image: url(images/layers-2x-8f2c4d11474275fbc1614b9098334eae.png);
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
@@ -394,7 +394,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* Default icon URLs */
 .leaflet-default-icon-path {
-	background-image: url(images/2b3e1faf89f94a4835397e7a43b4f77d.png);
+	background-image: url(images/marker-icon-2b3e1faf89f94a4835397e7a43b4f77d.png);
 	}
 
 
@@ -642,19 +642,19 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-ruler{
   height: 35px;
   width: 35px;
-  background-image: url(images/ec0b8891e639e6fc0935bf0bd2381e16.png); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+  background-image: url(images/icon-ec0b8891e639e6fc0935bf0bd2381e16.png); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
   background-repeat: no-repeat;
   background-position: center;
 }
 .leaflet-ruler:hover{
-  background-image: url(images/fe955027136b68e8a20fc56a024d97a5.png); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+  background-image: url(images/icon-colored-fe955027136b68e8a20fc56a024d97a5.png); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
 }
 .leaflet-ruler-clicked{
   height: 35px;
   width: 35px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(images/fe955027136b68e8a20fc56a024d97a5.png);
+  background-image: url(images/icon-colored-fe955027136b68e8a20fc56a024d97a5.png);
   border-color: chartreuse !important;
 }
 .leaflet-bar{
@@ -726,13 +726,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-control-zoom-in {
-	background-image: url(images/1fcee5ea149a635653f997319077a90a.svg);
+	background-image: url(images/icon-magnifyplus-1fcee5ea149a635653f997319077a90a.svg);
 	color: rgba(255,255,255,0) !important;
 	text-shadow: none;
 	}
 
 .leaflet-control-zoom-out {
-	background-image: url(images/44faa9691aa91deb3788c1460a078aa2.svg);
+	background-image: url(images/icon-magnifyminus-44faa9691aa91deb3788c1460a078aa2.svg);
 	color: rgba(255,255,255,0) !important;
 	text-shadow: none;
 	}
@@ -935,7 +935,7 @@ select.leaflet-control-iip-select {
 	width: 29px;
 	height: 29px;
 	background-color: #FFFFFF;
-	background-image: url(images/99d2b9ee1f29679fc96ee3eec4ad0800.svg);
+	background-image: url(images/icon-minus-99d2b9ee1f29679fc96ee3eec4ad0800.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	box-shadow: 1px 1px 2px #a0a0a0;
@@ -951,7 +951,7 @@ select.leaflet-control-iip-select {
 	width: 29px;
 	height: 29px;
 	background-color: #FFFFFF;
-	background-image: url(images/d48f6878a327e4cd59feee868a613314.svg);
+	background-image: url(images/icon-plus-d48f6878a327e4cd59feee868a613314.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	box-shadow: 1px 1px 2px #a0a0a0;
@@ -1095,7 +1095,7 @@ input.leaflet-flipswitch:checked + label .leaflet-flipswitch-button {
 /*------------------------------ Activity spinner ---------------------------*/
 
 .leaflet-control-iip-activity {
-	background-image: url(images/cb9f1e5859d1b156e9ebfc4ab99eef19.svg);
+	background-image: url(images/activity-cb9f1e5859d1b156e9ebfc4ab99eef19.svg);
 	background-size: 18px;
 	width: 18px;
 	height: 18px;
@@ -1106,7 +1106,7 @@ input.leaflet-flipswitch:checked + label .leaflet-flipswitch-button {
 
 .leaflet-control-iip-trash {
 	display: table-cell;
-	background-image: url(images/5572eafafcae3838b9d61ec467be8774.svg);
+	background-image: url(images/icon-trash-5572eafafcae3838b9d61ec467be8774.svg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 27px;
@@ -1124,7 +1124,7 @@ input.leaflet-flipswitch:checked + label .leaflet-flipswitch-button {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipchannel-toggle {
-	background-image: url(images/884905eb55e418245aa15ec603d2621c.svg);
+	background-image: url(images/icon-equalizer2-884905eb55e418245aa15ec603d2621c.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1139,13 +1139,13 @@ a#leaflet-iipchannel-toggle {
 /*--------------------------------- Mixing mode -----------------------------*/
 
 input#leaflet-control-iip-radio-mono + label {
-	background-image: url(images/f07922ffc0a4257aedffbc43715dc3d3.svg);
+	background-image: url(images/icon-palette-f07922ffc0a4257aedffbc43715dc3d3.svg);
 	border-radius: 4px 0px 0px 4px;
 }
 
 input#leaflet-control-iip-radio-color + label {
 	margin: 0px 0px 0px 2px;
-	background-image: url(images/fe8bbd8762666151de2cdd251e3958a0.svg);
+	background-image: url(images/icon-stack-fe8bbd8762666151de2cdd251e3958a0.svg);
 	border-radius: 0px 4px 4px 0px;
 }
 
@@ -1175,17 +1175,17 @@ input.leaflet-cmap:checked + label {
 }
 
 input#leaflet-cmap-grey + label {
-	background-image: url(images/79c6b7099c6900a69839b328859977ff.svg);
+	background-image: url(images/icon-grey-79c6b7099c6900a69839b328859977ff.svg);
 	border-radius: 4px 0px 0px 4px;
 }
 input#leaflet-cmap-jet + label {
-	background-image: url(images/80ffe01ab7504c90b25a3383ebdd7ef0.svg);
+	background-image: url(images/icon-jet-80ffe01ab7504c90b25a3383ebdd7ef0.svg);
 }
 input#leaflet-cmap-cold + label {
-	background-image: url(images/1718bcb017b5aa84c23713741be26933.svg);
+	background-image: url(images/icon-cold-1718bcb017b5aa84c23713741be26933.svg);
 }
 input#leaflet-cmap-hot + label {
-	background-image: url(images/6918db0c897f67a6ff1609ed8c9835ef.svg);
+	background-image: url(images/icon-hot-6918db0c897f67a6ff1609ed8c9835ef.svg);
 	border-radius: 0px 4px 4px 0px;
 }
 
@@ -1196,12 +1196,12 @@ input#leaflet-cmap-hot + label {
 /*-------------------------------- Channel list -----------------------------*/
 
 a#leaflet-control-iip-button-colormix-reset {
-	background-image: url(images/bf377e26ce8320ceab35b95d5486b813.svg);
+	background-image: url(images/icon-reset-bf377e26ce8320ceab35b95d5486b813.svg);
 	border-radius: 4px 0px 0px 4px;
 }
 
 a#leaflet-control-iip-button-colormix-auto {
-	background-image: url(images/2b2845a7b97bf00cc7141951015b27cc.svg);
+	background-image: url(images/icon-magicwand-2b2845a7b97bf00cc7141951015b27cc.svg);
 	border-radius: 0px 4px 4px 0px;
 }
 
@@ -1245,7 +1245,7 @@ a#leaflet-control-iip-button-colormix-auto {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipimage-toggle {
-	background-image: url(images/d822a2e022f42cf2a523177bae8394d8.svg);
+	background-image: url(images/icon-contrast-d822a2e022f42cf2a523177bae8394d8.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1258,7 +1258,7 @@ a#leaflet-iipimage-toggle {
 }
 
 a#leaflet-control-iip-button-image-reset {
-	background-image: url(images/bf377e26ce8320ceab35b95d5486b813.svg);
+	background-image: url(images/icon-reset-bf377e26ce8320ceab35b95d5486b813.svg);
 	border-radius: 4px 0px 0px 4px;
 }
 
@@ -1267,7 +1267,7 @@ a#leaflet-control-iip-button-image-reset {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipcatalog-toggle {
-	background-image: url(images/f9ef34769669a6e1ac004c768021dd8e.svg);
+	background-image: url(images/icon-make-group-f9ef34769669a6e1ac004c768021dd8e.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1295,7 +1295,7 @@ a#leaflet-iipcatalog-toggle {
 }
 
 .logo-catalog-cds {
-	background: url(images/8dbe5761a46a81da640e4d358908651e.png) no-repeat;
+	background: url(images/cds-8dbe5761a46a81da640e4d358908651e.png) no-repeat;
 	background-size: 2.4em;
 	background-position: center right 16px;
 	display: inline-block;
@@ -1303,7 +1303,7 @@ a#leaflet-iipcatalog-toggle {
 }
 
 .logo-catalog-mast {
-	background: url(images/0f0787d66f9964c15402b1cf0363ed75.png) no-repeat;
+	background: url(images/mast-0f0787d66f9964c15402b1cf0363ed75.png) no-repeat;
 	background-size: 2.4em;
 	background-position: center right 16px;
 	display: inline-block;
@@ -1311,7 +1311,7 @@ a#leaflet-iipcatalog-toggle {
 }
 
 .logo-catalog-vizier {
-	background: url(images/6b9a9a8af2866c356b82dbcceaf8f268.png) no-repeat;
+	background: url(images/vizier-6b9a9a8af2866c356b82dbcceaf8f268.png) no-repeat;
 	background-size: 2.4em;
 	background-position: center right 16px;
 	display: inline-block;
@@ -1324,7 +1324,7 @@ a#leaflet-iipcatalog-toggle {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipregion-toggle {
-	background-image: url(images/f99a16727f4f6a6ff076362f9c6f4d21.svg);
+	background-image: url(images/icon-location-f99a16727f4f6a6ff076362f9c6f4d21.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1356,7 +1356,7 @@ a#leaflet-iipregion-toggle {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipprofile-toggle {
-	background-image: url(images/515b6e31b996c843ac3437eae90bb658.svg);
+	background-image: url(images/icon-plot-515b6e31b996c843ac3437eae90bb658.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1432,18 +1432,18 @@ table.jqplot-table-legend, table.jqplot-cursor-legend {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipsnapshot-toggle {
-	background-image: url(images/2ee5d60b5ccec7ecfecbb8b41a596ba2.svg);
+	background-image: url(images/icon-camera-2ee5d60b5ccec7ecfecbb8b41a596ba2.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 a#leaflet-control-iip-button-snapshot {
-	background-image: url(images/90be8210ac6b1e228e79e84b1f9c99db.svg);
+	background-image: url(images/icon-image-90be8210ac6b1e228e79e84b1f9c99db.svg);
 	border-radius: 4px 4px 4px 4px;
 }
 
 a#leaflet-control-iip-button-print {
-	background-image: url(images/a28929f55629f181e3a5ebc3984f76b3.svg);
+	background-image: url(images/icon-print-a28929f55629f181e3a5ebc3984f76b3.svg);
 	border-radius: 4px 4px 4px 4px;
 }
 
@@ -1463,7 +1463,7 @@ a#leaflet-control-iip-button-print {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 a#leaflet-iipdoc-toggle {
-	background-image: url(images/f3a9966b6984cff64d162cc0a6976464.svg);
+	background-image: url(images/icon-info-f3a9966b6984cff64d162cc0a6976464.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 36px;
@@ -1518,7 +1518,7 @@ iframe.leaflet-control-iip-doc {
 }
 
 #leaflet-control-iip-button-home {
-	background-image: url(images/e52beda0164f6205bb843ee387cf5a55.svg);
+	background-image: url(images/icon-home-e52beda0164f6205bb843ee387cf5a55.svg);
 	color: yellow;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1529,7 +1529,7 @@ iframe.leaflet-control-iip-doc {
 }
 
 #leaflet-control-iip-button-back {
-	background-image: url(images/313d6864bcabb4d285537618bb19a048.svg);
+	background-image: url(images/icon-left-313d6864bcabb4d285537618bb19a048.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 32px;
@@ -1539,7 +1539,7 @@ iframe.leaflet-control-iip-doc {
 }
 
 #leaflet-control-iip-button-forward {
-	background-image: url(images/8ac4d13bac64ac95b736a05f3e8c2b09.svg);
+	background-image: url(images/icon-right-8ac4d13bac64ac95b736a05f3e8c2b09.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 32px;
@@ -1549,7 +1549,7 @@ iframe.leaflet-control-iip-doc {
 }
 
 #leaflet-control-iip-button-pdf {
-	background-image: url(images/b0ce5000ee38843db3f43cf6df22a946.svg);
+	background-image: url(images/icon-pdf-b0ce5000ee38843db3f43cf6df22a946.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 32px;
@@ -1613,7 +1613,7 @@ iframe.leaflet-control-iip-doc {
 	width: 29px;
 	height: 29px;
 	background-color: #FFFFFF;
-	background-image: url(images/6eedec38406702a660611b61fa4c105c.svg);
+	background-image: url(images/icon-clipboard-6eedec38406702a660611b61fa4c105c.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	box-shadow: 1px 1px 2px #a0a0a0;
@@ -1645,7 +1645,7 @@ iframe.leaflet-control-iip-doc {
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 .leaflet-reticle {
-	background-image: url(images/491bfe00ce7c9aeb40ac1de3b1aeab0d.svg);
+	background-image: url(images/reticle-491bfe00ce7c9aeb40ac1de3b1aeab0d.svg);
 	width: 26px;
 	height: 26px;
 	margin: -13px -13px -13px -13px;
@@ -1715,7 +1715,7 @@ iframe.leaflet-control-iip-doc {
 .leaflet-control-extramap a.leaflet-control-extramap-toggle-display.minimized-bottomleft,
 .leaflet-control-extramap a.leaflet-control-extramap-toggle-display.minimized-topright {
 	opacity: 1.0;
-	background-image: url(images/fb58abdf44906ae103a0f103feabf179.svg);
+	background-image: url(images/icon-map-fb58abdf44906ae103a0f103feabf179.svg);
 	background-color: #FFFFFF;
 }
 .leaflet-control-extramap:hover .leaflet-control-extramap-toggle-display {
@@ -1724,7 +1724,7 @@ iframe.leaflet-control-iip-doc {
 
 .leaflet-control-extramap-toggle-display {
 	opacity: 0.33;
-	background-image: url(images/8c2e2bed8d4e028cd2c380bea47ae042.svg);
+	background-image: url(images/icon-shrink-8c2e2bed8d4e028cd2c380bea47ae042.svg);
 }
 
 .leaflet-control-minimap-toggle-display-bottomright {
@@ -1760,20 +1760,20 @@ iframe.leaflet-control-iip-doc {
    (see copyright notice in Control.FullScreen.js
 */
 a.leaflet-control-zoom-fullscreen {
-	background-image: url(images/6c91e34ae2423cb04eb8464a9bbb18f0.svg);
+	background-image: url(images/icon-fullscreen-6c91e34ae2423cb04eb8464a9bbb18f0.svg);
 }
 
 :fullscreen .leaflet-control-zoom-fullscreen {
-	background-image: url(images/0b8b5863901d1f33fa39831231d6211b.svg)!important;
+	background-image: url(images/icon-windowed-0b8b5863901d1f33fa39831231d6211b.svg)!important;
 }
 :-moz-full-screen .leaflet-control-zoom-fullscreen {
-	background-image: url(images/0b8b5863901d1f33fa39831231d6211b.svg)!important;
+	background-image: url(images/icon-windowed-0b8b5863901d1f33fa39831231d6211b.svg)!important;
 }
 :-webkit-full-screen .leaflet-control-zoom-fullscreen {
-	background-image: url(images/0b8b5863901d1f33fa39831231d6211b.svg)!important;
+	background-image: url(images/icon-windowed-0b8b5863901d1f33fa39831231d6211b.svg)!important;
 }
 :-ms-fullscreen .leaflet-control-zoom-fullscreen {
-	background-image: url(images/0b8b5863901d1f33fa39831231d6211b.svg)!important;
+	background-image: url(images/icon-windowed-0b8b5863901d1f33fa39831231d6211b.svg)!important;
 }
 
 .leaflet-pseudo-fullscreen {
@@ -1816,25 +1816,25 @@ UL.filetree A:hover {
 }
 
 .filetree LI.directory {
-	background: url(images/c48251bceaad5a658262dd77df6e7908.png) left top no-repeat;
+	background: url(images/directory-c48251bceaad5a658262dd77df6e7908.png) left top no-repeat;
 }
 .filetree LI.expanded {
-	background: url(images/58aee8165e4eea8ae1f3e6b933f8c7ce.png) left top no-repeat;
+	background: url(images/folder_open-58aee8165e4eea8ae1f3e6b933f8c7ce.png) left top no-repeat;
 }
 .filetree LI.file {
 	clear: both;
-	background: url(images/69f8ed51b3aab8a8b2024a114bd7ed3a.png) left top no-repeat;
+	background: url(images/file-69f8ed51b3aab8a8b2024a114bd7ed3a.png) left top no-repeat;
 }
 .filetree LI.wait {
-	background: url(images/cb9f1e5859d1b156e9ebfc4ab99eef19.svg) left top no-repeat;
+	background: url(images/activity-cb9f1e5859d1b156e9ebfc4ab99eef19.svg) left top no-repeat;
 	background-size: 16px;
 }
 .filetree LI.fits_ptif {
-	background: url(images/d61da7ccc04ea772f11010da580cdaa9.png) left top no-repeat;
+	background: url(images/picture-d61da7ccc04ea772f11010da580cdaa9.png) left top no-repeat;
 	font-weight: bold;
 }
 .filetree LI.fits_noptif {
-	background: url(images/d61da7ccc04ea772f11010da580cdaa9.png) left top no-repeat;
+	background: url(images/picture-d61da7ccc04ea772f11010da580cdaa9.png) left top no-repeat;
 	font-weight: normal;
 }
 .filetree .filename {
@@ -1891,19 +1891,19 @@ UL.filetree A:hover {
 }
 
 #logo-visiomatic {
-	background: url(images/1bb12b43c4fd32f47d5db2c802583e49.png) no-repeat;
+	background: url(images/visiomatic-1bb12b43c4fd32f47d5db2c802583e49.png) no-repeat;
 	background-size: 2.1em;
 	background-position: center;
 }
 
 #logo-iipimage {
-	background: url(images/b212d626baf232113bd7341e0f0b4deb.png) no-repeat;
+	background: url(images/iip-b212d626baf232113bd7341e0f0b4deb.png) no-repeat;
 	background-size: 2.4em;
 	background-position: center;
 }
 
 #logo-leaflet {
-	background: url(images/b414b30e22986576cf2619e608742053.svg) no-repeat;
+	background: url(images/leaflet-b414b30e22986576cf2619e608742053.svg) no-repeat;
 }
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
@@ -1914,10 +1914,10 @@ UL.filetree A:hover {
 */
 
 a.leaflet-control-zoom-sidebar {
-	background-image: url(images/902582b33e678a081cf10cb7b4092c2c.svg);
+	background-image: url(images/icon-backward2-902582b33e678a081cf10cb7b4092c2c.svg);
 }
 a.leaflet-control-zoom-sidebar.collapsed {
-	background-image: url(images/fe6f8fc6f5c18cd9982113ce74b941ae.svg);
+	background-image: url(images/icon-menu-fe6f8fc6f5c18cd9982113ce74b941ae.svg);
 }
 
 .sidebar {
@@ -2092,7 +2092,7 @@ cursor: default;
 	outline: none;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(images/a93d1439f9abcabe95ff23a9065ce826.svg);
+	background-image: url(images/icon-backward-a93d1439f9abcabe95ff23a9065ce826.svg);
 	background-color: rgba(255, 255, 255, 0.75);
 	background-repeat: no-repeat;
 	background-position: center;

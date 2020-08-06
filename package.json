@@ -2,6 +2,18 @@
   "name": "visiomatic",
   "version": "2.0.1-cm.1",
   "description": "JavaScript library for remotely visualising astronomical images using Leaflet",
+  "main": "dist/visiomatic.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"no test yet\" && exit 0",
+    "lint": "eslint --fix --ext .js ./src/",
+    "build": "webpack --config webpack.config.js"
+  },
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conormcp/visiomatic"
+  },
   "dependencies": {
     "jqplot-exported": "^1.0.9-pm.9",
     "jquery": "^3.5.1",
@@ -24,20 +36,8 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
-  "main": "dist/visiomatic.js",
-  "private": true,
-  "scripts": {
-    "test": "echo \"no test yet\" && exit 0",
-    "lint": "eslint --fix --ext .js ./src/",
-    "build": "babel dist/visiomatic.js -d lib",
-    "webpack": "webpack --config webpack.config.js"
-  },
-  "license": "BSD-2-Clause",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/astromatic/visiomatic"
-  },
   "contributors": [
+    "Conor McPartland <conor.mcpartland@gmail.com> (https://github.com/conormcp)",
     "Emmanuel Bertin <bertin@iap.fr> (https://github.com/ebertin)",
     "Chiara Marmo <chiara.marmo@u-psud.fr> (https://github.com/cmarmo)",
     "Ruven Pillay <ruven@c2rmf.cnrs.fr> (https://github.com/ruven)"
